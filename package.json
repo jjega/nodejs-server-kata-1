@@ -7,7 +7,11 @@
     "url": "git@github.com:echocat/nodejs-kata-1.git"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parser": "^2.3.2",
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "^6.5.1",
@@ -17,7 +21,8 @@
     "sinon": "^7.5.0"
   },
   "scripts": {
-    "start": "node $NODE_DEBUG_OPTION src/index.js",
+    "start": "node $NODE_DEBUG_OPTION ./bin/www",
+    "dev": "nodemon ./bin/www",
     "lint": "eslint .",
     "test": "mocha './@(test|src)/**/*.test.js'"
   }
